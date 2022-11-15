@@ -9,7 +9,6 @@ import { Redirect, Switch, Route } from "react-router-dom"
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-// import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -24,7 +23,6 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Redirect to="/" />
       </Switch>
-      {/* <Footer/> */}
     </>
   );
 }
