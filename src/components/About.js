@@ -1,14 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const About = () => {
+const About = ({ mode }) => {
   return (
     <div>
-      <div className='container py-5 my-5'>
+      <div className={`container py-5 my-5 bg-${mode === "light" ? "light" : "black"}`}>
         <div className='row'>
           <div className='col-md-6'>
-            <h1 className='text-primary fw-bold mb-4'>About Us</h1>
-            <p className='lead mb-4'>
+            <h1 className={`text-${mode === "light" ? "primary" : "light"} fw-bold mb-4`}>About Us</h1>
+            <p className={`lead mb-4 text-${mode === "light" ? "black" : "light"}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quae suscipit beatae, facilis eligendi fugit.
               Quisquam, odit? Ullam vero quos temporibus, minima inventore quibusdam excepturi omnis iste, architecto doloribus
               sed accusantium tempore consequuntur quasi dignissimos voluptatum laboriosam ut explicabo soluta delectus nobis
@@ -17,7 +17,7 @@ const About = () => {
               fuga necessitatibus perferendis possimus deserunt adipisci. Vitae ratione omnis rem quasi quisquam explicabo
               possimus, ducimus, quidem, ea enim quam debitis nihil laboriosam voluptate exercitationem recusandae.
             </p>
-            <NavLink to="/contact" className="btn btn-outline-primary px-3">
+            <NavLink to="/contact" className={`btn btn-outline-${mode === "light" ? "primary" : "light"} px-3`}>
               Contact Us
             </NavLink>
           </div>

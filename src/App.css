@@ -20,7 +20,9 @@
   margin-left: 10px;
   cursor: pointer;
 }
-
+#root{
+  background: black;
+}
 .moonlogo {
   font-weight: 900;
   font-size: 1.3em;
