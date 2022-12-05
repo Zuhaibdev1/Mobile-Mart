@@ -4,12 +4,11 @@ import CartBtn from './buttons/CartBtn'
 import Login from './buttons/Login'
 import Signup from './buttons/Signup'
 
-const Header = () => {
+const Header = ({ mode, changeMode }) => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light">
+      <nav className={`navbar navbar-expand-lg bg-${mode} navbar-${mode}`}>
         <div className="container-fluid py-2">
-
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -29,9 +28,13 @@ const Header = () => {
               </li>
             </ul>
             <NavLink className="navbar-brand mx-auto fw-bold" to="/">MOBILE MART</NavLink>
-            <Login />
-            <Signup />
-            <CartBtn />
+            <Login mode={mode} />
+            <Signup mode={mode} />
+            <CartBtn mode={mode} />
+            <div onClick={changeMode}>{mode === "light" ? <i class="fa-solid fa-moon moonlogo"></i> : <i class="fa-solid fa-sun  sunlogo "></i>}
+              {/* <i class="fa-solid fa-sun  sunlogo "></i>
+              <i class="fa-solid fa-moon moonlogo"></i> */}
+            </div>
           </div>
         </div>
       </nav>

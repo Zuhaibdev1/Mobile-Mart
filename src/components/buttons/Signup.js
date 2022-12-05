@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Signup = () => {
+const Signup = ({mode}) => {
   return (
     <>
-      <button type="button" className="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+      <button type="button" className={`btn btn-outline-${mode === "light" ? "primary" : "light"} ms-2`} data-bs-toggle="modal" data-bs-target="#signupModal">
         <span className='fa fa-user-plus me-1'> </span>Registration
       </button>
       <div className="modal fade" id="signupModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
