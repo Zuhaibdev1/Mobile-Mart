@@ -32,10 +32,10 @@ const Cart = ({ mode }) => {
   }
   const emptyCart = () => {
     return (
-      <div className='px-4 my-5 bg-dark rounded-3 py-5'>
+      <div className={`px-4 my-5 bg-${mode} rounded-3 py-5`}>
         <div className='container py-4'>
           <div className='row'>
-            <h3 className={`text-${mode === "light" ? "dark" : "light"}`}>Your Cart is Empty</h3>
+            <h3 className={`text - ${mode === "light" ? "dark" : "light"} `}>Your Cart is Empty</h3>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ const Cart = ({ mode }) => {
     return (
       <div className="container">
         <div className='row'>
-          <NavLink to="/checkout" className={`btn btn-outline-${mode === "light" ? "primary" : "light"} mb-5 w-25 mx-auto`}> Proceed To Checkout</NavLink>
+          <NavLink to="/checkout" className={`btn btn - outline - ${mode === "light" ? "primary" : "light"} mb - 5 w - 25 mx - auto`}> Proceed To Checkout</NavLink>
 
         </div>
       </div >
