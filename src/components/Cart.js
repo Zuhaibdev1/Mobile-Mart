@@ -35,7 +35,7 @@ const Cart = ({ mode }) => {
       <div className='px-4 my-5 bg-dark rounded-3 py-5'>
         <div className='container py-4'>
           <div className='row'>
-            <h3>Your Cart is Empty</h3>
+            <h3 className={`text-${mode === "light" ? "dark" : "light"}`}>Your Cart is Empty</h3>
           </div>
         </div>
       </div>
