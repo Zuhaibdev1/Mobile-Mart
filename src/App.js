@@ -15,11 +15,13 @@ function App() {
     if (mode === "light") {
       setMode("dark")
       document.body.style.backgroundColor = "black"
+      document.title = "Mobile Mart - Dark Mode";
 
     }
     else {
       setMode("light")
       document.body.style.backgroundColor = "white"
+      document.title = "Mobile Mart - Light Mode";
 
     }
   }
