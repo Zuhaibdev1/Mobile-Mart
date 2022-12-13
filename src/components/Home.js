@@ -10,7 +10,7 @@ const Home = ({ mode }) => {
             <img src="/assets/images/home/cover1.png" class="cover1" alt="IPhone" />
           </div>
           <div class="carousel-item bg-black">
-            <img src="/assets/images/home/cover2.jpg" class="cover2" alt="IPhone" />
+            <img src="/assets/images/home/cover2.png" class="cover2" alt="IPhone" />
           </div>
           <div class="carousel-item ">
             <img src="/assets/images/home/cover3.png" class="cover3" alt="IPhone" />

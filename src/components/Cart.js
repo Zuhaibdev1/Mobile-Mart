@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { delItem } from "../redux/actions/index"
 
-const Cart = () => {
+const Cart = ({ mode }) => {
 
   const state = useSelector((state) => state.addItem)
   const dispatch = useDispatch()
@@ -14,7 +14,7 @@ const Cart = () => {
 
   const cartitems = (cartItem) => {
     return (
-      <div className='px-4 my-5 bg-light rounded-3' key={cartItem.id}>
+      <div className='px-4 my-5 bg-dark rounded-3' key={cartItem.id}>
         <div className='Container py-4 '>
           <button onClick={() => handleClose(cartItem)} className='btn-close float-end' aria-label='Close'></button>
           <div className='row justify-content-center'>
@@ -32,7 +32,7 @@ const Cart = () => {
   }
   const emptyCart = () => {
     return (
-      <div className='px-4 my-5 bg-light rounded-3 py-5'>
+      <div className='px-4 my-5 bg-dark rounded-3 py-5'>
         <div className='container py-4'>
           <div className='row'>
             <h3>Your Cart is Empty</h3>
@@ -45,10 +45,10 @@ const Cart = () => {
     return (
       <div className="container">
         <div className='row'>
-          <NavLink to="/checkout" className="btn btn-outline-primary mb-5 w-25 mx-auto"> Proceed To CheckOut</NavLink>
+          <NavLink to="/checkout" className={`btn btn-outline-${mode === "light" ? "primary" : "light"} mb-5 w-25 mx-auto`}> Proceed To Checkout</NavLink>
 
         </div>
-      </div>
+      </div >
 
     )
   }

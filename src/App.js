@@ -14,10 +14,13 @@ function App() {
   const changeMode = () => {
     if (mode === "light") {
       setMode("dark")
+      document.body.style.backgroundColor = "black"
 
     }
     else {
       setMode("light")
+      document.body.style.backgroundColor = "white"
+
     }
   }
   return (
@@ -27,8 +30,8 @@ function App() {
         <Route exact path="/" ><Home mode={mode} /> </Route>
         <Route exact path="/products" ><Product mode={mode} /></Route>
         <Route exact path="/products/:id"><ProductDetail mode={mode} /></Route>
-        <Route exact path="/cart" component={Cart} />
-        <Route exact path="/checkout" component={Checkout} />
+        <Route exact path="/cart" ><Cart mode={mode} /></Route>
+        <Route exact path="/checkout"><Checkout mode={mode} /></Route>
         <Route exact path="/about"><About mode={mode} /></Route>
         <Route exact path="/contact" ><Contact mode={mode} /></Route>
         <Redirect to="/" />

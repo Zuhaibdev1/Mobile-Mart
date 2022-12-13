@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const Checkout = () => {
+const Checkout = ({ mode }) => {
   const state = useSelector((state) => state.addItem)
   var total = 0
   const itemList = (item) => {
@@ -19,11 +19,11 @@ const Checkout = () => {
 
   return (
     <>
-      <div className='container my-5'>
+      <div className={`container my-5 text-${mode === "light" ? "dark" : "light"}`}>
         <div className="row g-5">
           <div className="col-md-5 col-lg-4 order-md-last">
             <h4 className="d-flex justify-content-between align-items-center mb-3">
-              <span className="text-primary">Your cart</span>
+              <span className={`text-${mode === "light" ? "primary" : "light"}`}>Your cart</span>
               <span className="badge bg-primary rounded-pill">{state.lenght}</span>
             </h4>
             <ul className="list-group mb-3">
@@ -193,7 +193,7 @@ const Checkout = () => {
 
               <hr className="my-4" />
 
-              <button className="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+              <button className={`w-100 btn btn-outline-${mode === "light" ? "primary" : "light"} btn-lg" my-2`} type="submit">Continue to checkout</button>
             </form>
           </div>
         </div>
